@@ -1,9 +1,9 @@
 (function(angular) {
     'use strict';
 
-    var url = 'https://upload.wistia.com/?access_token=e4d976888a1bf79e49f161f3b7f0d8abfa1d4c46dac376f99ccfa4085e252ea8';
+    var url = 'https://upload.wistia.com/?access_token='+API_TOKEN+;
     var mediaUrl = 'https://api.wistia.com/v1/medias.json';
-    var apiPassword = 'e4d976888a1bf79e49f161f3b7f0d8abfa1d4c46dac376f99ccfa4085e252ea8'
+    var apiPassword = API_TOKEN;
     angular.module('app', ['blueimp.fileupload'])
         .config([
             '$httpProvider', 'fileUploadProvider',
