@@ -1,0 +1,12 @@
+{
+  "name": "material-list",
+  "devDependencies": {
+    "jquery": "~1.11.3"
+  },
+  "dependencies": {
+    "angular": "^1.6.4",
+  },
+  "resolutions": {
+    "angular": "^1.6.4"
+  }
+}

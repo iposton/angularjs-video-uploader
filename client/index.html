@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Angular | VideoUploader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="description" content="AngularJS VideoUploader">
+    <link rel="icon" href="favicon.jpg">
+   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   
+    <!--Styles for File Uploader Plugin -->
+    <link rel="stylesheet" href="http://blueimp.github.io/jQuery-File-Upload/css/jquery.fileupload.css" />
+    <link rel="stylesheet" href="http://blueimp.github.io/jQuery-File-Upload/css/jquery.fileupload-ui.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="app/app.css" />
+</head>
+
+<body ng-app="app" ng-cloak>
+
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-fixed-top .navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Video Uploader</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+               
+            </ul>
+        </div>
+    </div>
+</div>
+<video-uploader></video-uploader>
+
+ 
+  <!-- Jquery version 1.11.3 and AngularJS version 1.6.3 -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  
+  <!-- Blueimp Scripts -->
+  <script src="https://blueimp.github.io/jQuery-File-Upload/js/vendor/jquery.ui.widget.js"></script>
+  <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+  <script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+  <!-- The Canvas to Blob plugin is included for image resizing functionality -->
+  <script src="//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+  <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+  <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+  <script src="https://rawgit.com/blueimp/jQuery-File-Upload/master/js/jquery.iframe-transport.js"></script>
+  <!-- The basic File Upload plugin -->
+  <script src="https://blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload.js"></script>
+  <!-- The File Upload processing plugin -->
+  <script src="https://blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-process.js"></script>
+  <!-- The File Upload image preview & resize plugin -->
+  <script src="https://blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-image.js"></script>
+  <!-- The File Upload validation plugin -->
+  <script src="https://blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-validate.js"></script>
+  <!-- The File Upload Angular JS module -->
+  <script src="https://blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-angular.js"></script>
+  <!-- The File Upload video preview plugin -->
+<script src="https://blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-video.js"></script>
+
+  <!-- Scripts for Wistia embed -->
+  <script src="//fast.wistia.com/embed/medias/j38ihh83m5.jsonp" async></script>
+  <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+
+  <script src="app/app.js"></script>
+
+</body>
+
+</html>
