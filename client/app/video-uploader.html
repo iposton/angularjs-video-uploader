@@ -2,6 +2,19 @@
       <!-- Redirect browsers with JavaScript disabled to the origin page -->
       <!--   <noscript><input type="hidden" name="redirect" value="https://blueimp.github.io/jQuery-File-Upload/"></noscript> -->
         <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+        <div class="row upload-target panel panel--upload-target">
+          <div class="col-lg-12">
+            <div class="upload-prompt-image" />
+            <h1>Let's upload a video!</h1>
+
+
+
+                <h3>Drag and drop your video here, or</h3>
+
+              
+
+          </div>
+        </div>
         <div class="row fileupload-buttonbar">
             <div class="col-lg-12">
                 <!-- The fileinput-button span is used to style the file input field as button -->
@@ -22,7 +35,7 @@
                 <span class="fileupload-process"></span>
             </div>
             <!-- The global progress state -->
-            <div class="col-lg-5 fade" data-ng-class="{in: active()}">
+           <div class="col-md-6 col-md-offset-3 fade" data-ng-class="{in: active()}">
                 <!-- The global progress bar -->
                 <div class="progress progress-striped active" data-file-upload-progress="progress()"><div class="progress-bar progress-bar-success" data-ng-style="{width: num + '%'}"></div></div>
                 <!-- The extended global progress state -->
@@ -74,7 +87,7 @@
                 
             </tr>
         </table>
-        <h1 ng-if="messagetext === true">{{message}}</h1>
+        <h1 ng-if="messagetext === true" class="msg">{{message}}</h1>
     </form>
     <br>
   <div ng-repeat="embed in embedArray" class="video-container">
@@ -90,7 +103,7 @@
         <div class="panel-body">
             <ul>
                 <li>The maximum file size for uploads in this demo is <strong>40 MB</strong> (default file size is unlimited).</li>
-                <li>Only video files (<strong>MP4</strong>) are allowed in this demo (by default there is no file type restriction).</li>
+                <li>Only video files (<strong>MP4/MOV</strong>) are allowed in this demo (by default there is no file type restriction).</li>
                 <li>You can <strong>drag &amp; drop</strong> files from your desktop on this webpage (see <a href="https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support">Browser support</a>).</li>
             </ul>
         </div>

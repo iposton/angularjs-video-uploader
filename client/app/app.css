@@ -22,3 +22,24 @@ body {
 .panel-body ul li {
    color: #333;
 }
+
+.panel--upload-target {
+    border: #d6d6d6 dashed 2px;
+    border-radius: 3px;
+    padding: 22px 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+form h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.fade {
+  margin-top: 15px;
+}
+
+
