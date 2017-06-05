@@ -76,10 +76,7 @@
                         <i class="glyphicon glyphicon-ban-circle"></i>
                         <span>Cancel</span>
                     </button>
-                    <button ng-if="myfile.url === 'url'" type="button" class="btn btn-danger destroy" data-ng-click="file.$destroy()">
-                        <i class="glyphicon glyphicon-trash"></i>
-                        <span>Delete</span>
-                    </button>
+                    
                     
                 </td> 
                 
@@ -93,6 +90,10 @@
   <div ng-repeat="embed in embedArray" class="video-container">
      <h2>{{embed.name}}</h2>
      <div class="wistia_embed wistia_async_{{embed.hashed_id}}">&nbsp;</div> 
+     <button type="button" class="btn btn-danger destroy" ng-click="destroy(embed.hashed_id)">
+                        <i class="glyphicon glyphicon-trash"></i>
+                        <span>Delete</span>
+                    </button>
   </div>    
 
    

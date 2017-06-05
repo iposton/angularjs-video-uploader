@@ -1,9 +1,9 @@
 (function(angular) {
     'use strict';
 
-    var url = 'https://upload.wistia.com/?access_token='+API_TOKEN;
+    var url = 'https://upload.wistia.com/?access_token=7a6882f6bf2ebcdc9cedca50c44a65a16e444d1c13b2c9e4764d62131766f6b6';
     var mediaUrl = 'https://api.wistia.com/v1/medias.json';
-    var apiPassword = API_TOKEN;
+    var apiPassword = '7a6882f6bf2ebcdc9cedca50c44a65a16e444d1c13b2c9e4764d62131766f6b6';
     angular.module('app', ['blueimp.fileupload'])
         .config([
             '$httpProvider', 'fileUploadProvider',
@@ -98,6 +98,25 @@
                         console.error("Error with GET request", error);
                     })
 
+                }
+
+                var destroy = function (id) {
+                   $http({
+                        method: 'delete',
+                        url: 'https://api.wistia.com/v1/projects/'+id+'.json',
+                        params: {
+                            api_password: apiPassword
+                        }
+                    }).then(function(response) {
+                        console.log(response, 'res delete');
+                        
+                      
+
+                    }).catch(function(error) {
+                      
+                        //If error throw error
+                        console.error("Error with DELETE request", error);
+                    })
                 }
                 //Get videos from Wistia API right away. 
                 getVideos();
