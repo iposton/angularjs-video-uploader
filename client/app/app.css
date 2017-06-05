@@ -1,9 +1,24 @@
 body {
   padding-top: 60px;
+  background: #000;
+}
+
+.fileupload-buttonbar {
+  text-align: center;
+}
+
+.video-container {
+  color: #fff;
+  text-align: center;
+  margin: 20px 0 20px 0;
 }
 
 .wistia_embed {
-  height:349px;
-  width:620px; 
-  margin:10px;
+  height: 349px;
+  width: 620px; 
+  margin: 0 auto;
+}
+
+.panel-body ul li {
+   color: #333;
 }
