@@ -15,6 +15,12 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
+// For Heroku config vars
+app.get('/config.js', function(req, res){
+       res.write("var API_KEY='"+process.env.API_TOKEN+"'" + '\n');
+       res.end();
+});
+
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
 });
