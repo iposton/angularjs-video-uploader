@@ -17,7 +17,7 @@ app.get('/', function(req, res) {
 
 // For Heroku config vars
 app.get('/config.js', function(req, res){
-       res.write("var API_KEY='"+process.env.API_TOKEN+"'" + '\n');
+       res.write("var API_TOKEN='"+process.env.API_TOKEN+"'" + '\n');
        res.end();
 });
 
