@@ -75,7 +75,7 @@
         };
 
         self.loadingFiles = true;
-        console.log($scope.loadingFiles, 'loading...');
+        console.log(self.loadingFiles, 'loading...');
 
         function getVideo() {
             $http({
