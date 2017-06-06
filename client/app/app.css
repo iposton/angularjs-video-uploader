@@ -42,9 +42,16 @@ form h1 {
   margin-top: 15px;
 }
 
-.embed .destroy {
+.video-container .destroy {
   margin: 10px;
   width: 200px;
+}
+
+@media only screen and (max-device-width: 580px) {
+  .wistia_embed {
+    height: 100px;
+    width: 320px; 
+  }
 }
 
 
