@@ -18,7 +18,7 @@
                     disableImageResize: /Android(?!.*Chrome)|Opera/
                         .test(window.navigator.userAgent),
                     maxFileSize: 40000000,
-                    acceptFileTypes: /(\.|\/)(mp4|mov|MOV)$/i
+                    acceptFileTypes: /(\.|\/)(mp4|mov|MOV|avi)$/i
                 });
             }
         ])
@@ -65,7 +65,6 @@
         self.options = {
             url: wistiaApi.url,
             done: function(e, data) {
-                console.log(data, 'done data');
                 //After upload get video from Wistia API 
                 self.getVideo();
                 //After upload is done clear out the files
@@ -85,7 +84,6 @@
                     api_password: wistiaApi.apiPassword
                 }
             }).then(function(response) {
-                console.log(response.data, 'res');
                 if (response.data.length === 0) {
                     self.messagetext = true;
                     return self.message = "No videos to show."
@@ -125,7 +123,6 @@
                     //After deleting video clear view and get videos
                     self.videoArray = [];
                     self.getVideo();
-                    console.log(response, 'res delete');
                 }).catch(function(error) {
                     //If error throw error
                     console.error("Error with DELETE request", error);

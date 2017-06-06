@@ -37,7 +37,7 @@
     </div>
     <!-- The table listing the files available for upload/download -->
     <table class="table table-striped files ng-cloak">
-        <tr data-ng-repeat="file in queue" data-ng-class="{'processing': file.$processing()}" ng-init="getFile(file)">
+        <tr data-ng-repeat="file in queue" data-ng-class="{'processing': file.$processing()}" ng-init="vm.getFile(file)">
             <!-- <pre>{{queue | json}}</pre> -->
             <td data-ng-switch data-on="!!file.thumbnailUrl">
                 <div class="preview" data-ng-switch-when="true">
@@ -91,7 +91,7 @@
     <div class="panel-body">
         <ul>
             <li>The maximum file size for uploads in this demo is <strong>40 MB</strong> (default file size is unlimited).</li>
-            <li>Only video files (<strong>MP4/MOV</strong>) are allowed in this demo (by default there is no file type restriction).</li>
+            <li>Only video files (<strong>MP4/MOV/AVI</strong>) are allowed in this demo (by default there is no file type restriction).</li>
             <li>You can <strong>drag &amp; drop</strong> files from your desktop on this webpage (see <a href="https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support">Browser support</a>).</li>
         </ul>
     </div>
