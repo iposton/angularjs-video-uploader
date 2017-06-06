@@ -1,7 +1,4 @@
-<form id="fileupload" action="" method="POST" enctype="multipart/form-data" data-file-upload="options">
-    <!-- Redirect browsers with JavaScript disabled to the origin page -->
-    <!--   <noscript><input type="hidden" name="redirect" value="https://blueimp.github.io/jQuery-File-Upload/"></noscript> -->
-    <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+<form id="fileupload" action="" method="POST" enctype="multipart/form-data" data-file-upload="vm.options">
     <div class="row upload-target panel panel--upload-target hidden-xs">
         <div class="col-lg-12">
             <div class="upload-prompt-image" />
@@ -76,13 +73,13 @@
             </td>
         </tr>
     </table>
-    <h1 ng-if="messagetext === true" class="msg">{{message}}</h1>
+    <h1 ng-if="vm.messagetext === true" class="msg">{{vm.message}}</h1>
 </form>
 <br>
-<div ng-repeat="embed in embedArray" class="video-container">
-    <h2>{{embed.name}}</h2>
-    <div class="wistia_embed wistia_async_{{embed.hashed_id}}">&nbsp;</div>
-    <button type="button" class="btn btn-danger destroy" ng-click="destroy(embed.hashed_id)">
+<div ng-repeat="video in vm.videoArray" class="video-container">
+    <h2>{{video.name}}</h2>
+    <div class="wistia_embed wistia_async_{{video.hashed_id}}">&nbsp;</div>
+    <button type="button" class="btn btn-danger destroy" ng-click="vm.destroyVideo(video.hashed_id)">
         <i class="glyphicon glyphicon-trash"></i>
         <span>Delete</span>
     </button>
