@@ -17,7 +17,7 @@
                     // send Blob objects via XHR requests:
                     disableImageResize: /Android(?!.*Chrome)|Opera/
                         .test(window.navigator.userAgent),
-                    maxFileSize: 40000000,
+                    maxFileSize: 400000000,
                     acceptFileTypes: /(\.|\/)(mp4|mov|MOV|avi)$/i
                 });
             }
