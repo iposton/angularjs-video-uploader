@@ -1,9 +1,9 @@
 (function(angular) {
     'use strict';
 
-    var url = 'https://upload.wistia.com/?access_token=7a6882f6bf2ebcdc9cedca50c44a65a16e444d1c13b2c9e4764d62131766f6b6';
+    var url = 'https://upload.wistia.com/?access_token='+API_TOKEN;
     var mediaUrl = 'https://api.wistia.com/v1/medias.json';
-    var apiPassword = '7a6882f6bf2ebcdc9cedca50c44a65a16e444d1c13b2c9e4764d62131766f6b6';
+    var apiPassword = API_TOKEN;
     angular.module('app', ['blueimp.fileupload'])
         .config([
             '$httpProvider', 'fileUploadProvider',
@@ -100,17 +100,17 @@
 
                 }
 
-                var destroy = function (id) {
+                $scope.destroy = function (id) {
                    $http({
                         method: 'delete',
-                        url: 'https://api.wistia.com/v1/projects/'+id+'.json',
+                        url: 'https://api.wistia.com/v1/medias/'+id+'.json',
                         params: {
                             api_password: apiPassword
                         }
                     }).then(function(response) {
+                      $scope.embedArray = [];
+                      getVideos();
                         console.log(response, 'res delete');
-                        
-                      
 
                     }).catch(function(error) {
                       

@@ -42,4 +42,9 @@ form h1 {
   margin-top: 15px;
 }
 
+.embed .destroy {
+  margin: 10px;
+  width: 200px;
+}
+
 
