@@ -49,10 +49,11 @@
 
         //Watch for video status from Wistia API
         $scope.$watch('status', function(newVal, oldVal) {
+            console.log(newVal, 'new val video status');
 
-            console.log(newVal, 'new val');
             if (newVal === 'queued') {
                 self.queued = "Video is being queued by Wistia..."
+                console.log(self.queued);
             }
 
         }, true)
@@ -94,7 +95,7 @@
                     self.hashed_id = response.data[0].hashed_id;
 
                     //Get video status for all videos in the array
-                    angular.forEach($scope.embedArray, function(item) {
+                    angular.forEach(self.videoArray, function(item) {
                         $scope.status = item.status;
 
                     })
